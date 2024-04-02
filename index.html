@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="style/lib/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+</header>
+<main>
+    <form id="hrEventSearchField" action="" class="support_search_field">
+        <div class="search_wrapper">
+            <div class="search_form">
+                <div class="input_wrapper input_wrapper_event">
+                    <div class="dropdown_menu_wrapper">
+                        <div class="dropdown_menu_container dropdown">
+                            <input name="name" autocomplete="off" id="search_input" data-toggle="dropdown" class="search_input search_input-event search_input_pointer" type="text" placeholder="Поиск мероприятия" onkeyup="filterSearchResults()">
+                            <div class="search_input-list search_input-list_container dropdown-menu" aria-labelledby="dropdownLink">
+                                <ul id="search_input_list" class="search_input-list js-search_input_list">
+                                    <li class="search_input-list_item">
+                                        <a class="search_input-list_item_link" href="#"><span class="search_input-list_item-text">Мероприятие 1</span></a>
+                                    </li>
+                                    <li class="search_input-list_item">
+                                        <a class="search_input-list_item_link" href="#"><span class="search_input-list_item-text">Мероприятие 2</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="search_icon search_icon_event active"></div>
+                    <span class="search_input-border search_input-border-event"></span>
+                </div>
+                <div class="input_wrapper input_wrapper_date" id="calendar_wrapper">
+                    <input name="date" autocomplete="off" id="datepicker" class="search_input search_input_pointer" type="text" placeholder="Дата мероприятия" readonly="">
+                    <div class="search_icon search_icon_date active"></div>
+                    <span class="search_input-border"></span>
+                    <section class="lightpick lightpick--2-columns is-hidden">
+                        <div class="lightpick__inner">
+                            <div class="lightpick__toolbar">
+                                <button type="button" class="lightpick__previous-action">
+                                    &lt;
+                                </button>
+                                <p class="lightpick__text">Выберите период</p>
+                                <button type="button" class="lightpick__next-action">
+                                    &gt;
+                                </button>
+                            </div>
+                            <div class="lightpick__months"></div>
+                            <div class="lightpick__tooltip" style="visibility: hidden"></div>
+                        </div>
+                    </section>
+                </div>
+                <div class="input_wrapper input_wrapper_place" id="input_wrapper_place">
+                    <input name="place" autocomplete="off" id="search_place_input" class="search_input search_input_pointer" type="text" value="" placeholder="Место проведения" readonly="">
+                    <ul id="search_input_list_place" class="search_input-list search_input_container-place">
+                        <li class="search_input_container-place_item">
+                            <label>
+                                <input class="checkbox search_input-checkbox" type="checkbox" id="allPlace" value="Все города">
+                                <span class="search_input-text">Все города</span>
+                            </label>
+                        </li>
+                        <li class="search_input_container-place_item">
+                            <label>
+                                <select id="search_input_place" class="search_input-list_place">
+                                    <option class="list-text" value="" selected="" disabled="" hidden="">
+                                        Выберите город
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="Москва">
+                                        Москва
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="г. Москва">
+                                        г. Москва
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="Hotel Moscow Krasnoselskaya">
+                                        Hotel Moscow Krasnoselskaya
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="Санкт-Петербург">
+                                        Санкт-Петербург
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="Алматы">
+                                        Алматы
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="Владивосток">
+                                        Владивосток
+                                    </option>
+                                    <option class="search_input_container-place_item" id="cityPlace" value="Екатеринбург">
+                                        Екатеринбург
+                                    </option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="search_input_container-place_item" id="isOnline">
+                            <label>
+                                <input class="search_input-checkbox" type="checkbox" id="online" value="Онлайн">
+                                <span class="search_input-text">Онлайн</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="search_icon search_icon_place active"></div>
+                    <span class="search_input-border"></span>
+                </div>
+                <div class="input_wrapper input_wrapper_price">
+                    <div class="dropdown_menu_wrapper">
+                        <div class="dropdown_menu_container dropdown">
+                            <input name="price" autocomplete="off" id="search_price_input" class="search_input search_input_pointer" type="text" placeholder="Стоимость" readonly="">
+                            <ul id="search_input_list_price" class="search_input-list search_input_container-price">
+                                <li class="search_input_container-price_item">
+                                    <label class="search_input-text">
+                                        <input id="isNotFree" type="checkbox" class="search_input-checkbox" value="Платно">
+                                        Платно
+                                    </label>
+                                </li>
+                                <li class="search_input_container-price_item">
+                                    <label class="search_input-text">
+                                        <input id="isFree" type="checkbox" class="search_input-checkbox" value="Бесплатно">
+                                        Бесплатно
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search_icon search_icon_price active"></div>
+                    </div>
+                </div>
+                <div class="search_btn-container">
+                    <button type="submit" class="search_btn search_btn_small">
+                        Найти
+                    </button>
+                    <button type="submit" class="search_btn search_btn_full">Найти
+                        мероприятия
+                    </button>
+                </div>
+                <input type="hidden" value="" id="hidden_input_price">
+                <input type="hidden" value="" id="hidden_input_place">
+                <input type="hidden" value="" id="hidden_input_date">
+                <input type="hidden" value="" id="hidden_input_name">
+                <div class="content_ending"></div>
+            </div>
+        </div>
+    </form>
+</main>
+<footer>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="script/lib/jquery.min.js"></script>
+<script src="script/lib/bootstrap-combine.min.js"></script>
+<script src="script/lib/lightpick.min.js"></script>
+<script src="script/lib/moment.min.js"></script>
+<script src="script/script.js"></script>
+</body>
+</html>
