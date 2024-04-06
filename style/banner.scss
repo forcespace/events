@@ -1,0 +1,167 @@
+.hr-event__card-banner {
+  position: relative
+}
+
+.hr-event__banner {
+  background: #6270f2;
+  border-radius: 22px;
+  display: none;
+  flex-direction: column;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  justify-content: space-between;
+  margin-bottom: 55px;
+  margin-top: 55px;
+  min-height: 524px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 94px;
+  width: 308px
+}
+
+.hr-event__banner-all-events {
+  margin-top: 35px
+}
+
+.hr-event__banner_in-card {
+  margin-top: -20px
+}
+
+.hr-event__banner-image {
+  border-radius: 20px;
+  margin-bottom: 22px;
+  max-height: 214px;
+  max-width: 308px
+}
+
+.hr-event__banner-link {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.hr-event__banner-link:focus,.hr-event__banner-link:hover,.hr-event__banner-link:visited {
+  text-decoration: none
+}
+
+.hr-event__banner-banner {
+  position: relative
+}
+
+.hr-event__banner_title {
+  color: #fff;
+  font: 22px/1.12 Euclid Circular B SemiBold,Roboto,sans-serif;
+  margin: 0 0 6px
+}
+
+.hr-event__banner_text {
+  color: #fff;
+  font: 16px/1.4 Euclid Circular B Regular,Roboto,sans-serif;
+  margin: 0
+}
+
+.hr-event__banner_content {
+  padding-left: 25px;
+  padding-right: 25px
+}
+
+.hr-event__banner_link {
+  background: transparent;
+  border: 1px solid #2f3337;
+  border-radius: 39px;
+  color: #fff;
+  display: block;
+  font: 16px/1.4 Euclid Circular B,Roboto,sans-serif;
+  margin-top: 12px;
+  max-width: 148px;
+  padding: 9px 15px;
+  position: relative;
+  text-align: center
+}
+
+.hr-event__banner_link:focus,.hr-event__banner_link:hover {
+  border-color: #151824;
+  color: #151824;
+  text-decoration: none
+}
+
+.hr-event__banner_link_arrow {
+  position: relative;
+  right: -3px;
+  transition: all .3s ease
+}
+
+.hr-event__banner_link_with-arrow:hover .hr-event__button_arrow {
+  right: -10px
+}
+
+.white-text {
+  margin-top: 10px
+}
+
+.white-text .hr-event__text {
+  color: #fff
+}
+
+.white-text .hr-event__button {
+  background: #ff6969;
+  border-color: #ff6969;
+  color: #fff;
+  margin-bottom: 10px
+}
+
+.white-text .hr-event__icon_date:before,.white-text .hr-event__icon_place:before,.white-text .hr-event__icon_time:before,.white-text .hr-event__icon_type:before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+  top: -3px;
+  vertical-align: middle
+}
+
+.white-text .hr-event__icon_date:before {
+  background: url(/ispring_content/content/images/landing/hr-events/calendar-icon-white.svg) no-repeat;
+  height: 18px;
+  width: 18px
+}
+
+.white-text .hr-event__icon_time:before {
+  background: url(/ispring_content/content/images/landing/hr-events/clocks-icon-white.svg) no-repeat;
+  height: 18px;
+  width: 17px
+}
+
+.white-text .hr-event__icon_type:before {
+  background: url(/ispring_content/content/images/landing/hr-events/label-icon-white.svg) no-repeat;
+  height: 22px;
+  width: 21px
+}
+
+.white-text .hr-event__icon_place:before {
+  background: url(/ispring_content/content/images/landing/hr-events/location-icon-white.svg) no-repeat;
+  height: 19px;
+  width: 16px
+}
+
+@media screen and (min-width: 1380px) {
+  .hr-event__banner {
+    display:flex;
+    margin-bottom: 55px
+  }
+
+  .b-mobile-banner {
+    display: none
+  }
+
+  .white-text .hr-event__button {
+    margin-bottom: 30px
+  }
+
+  .hr-card-container {
+    display: grid;
+    grid-template-columns: .55fr 891px 1fr
+  }
+}
