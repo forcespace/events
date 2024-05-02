@@ -191,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    [...searchParams.entries()].filter(param => param[0] !== "name" && param[0] !== "date" && param[0] !== "place" && param[0] !== "price").forEach(param => {
+    const excludedParams = ["name", "date", "place", "price"];
+    [...searchParams.entries()].filter(([key]) => !excludedParams.includes(key)).forEach(param => {
       const [key, value] = param;
       const input = document.createElement('input');
       input.setAttribute("name", key);
